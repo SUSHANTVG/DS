@@ -49,6 +49,19 @@ int queue::del() {
 	}
 }
 
+void queue::peek() {
+	int trear, tfront;
+	if(isEmpty())
+		cout<<"Nothing to display"<<endl;
+	else {
+		tfront = arr[0];
+		for(int i=0;i<=rear;i++)
+			trear = arr[i];
+		cout<<tfront<<" is at front"<<endl;
+		cout<<trear<<" is at rear"<<endl;
+	}
+}
+
 void queue::display() {
 	if(isEmpty())
 		cout<<"Nothing to display"<<endl;
