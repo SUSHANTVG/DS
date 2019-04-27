@@ -19,7 +19,7 @@ class queue {
 		bool isEmpty();
 		bool add(int);
 		int del();
-		//int peek();
+		void peek();
 		void display();
 };
 
