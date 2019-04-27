@@ -22,6 +22,7 @@ int main(){
 					cout<<ret<<" Deleted"<<endl;
 				break;
 			case 3:
+				obj.peek();
 				break;
 			case 4:
 				obj.display();
