@@ -99,7 +99,7 @@ int scll::deleteAtEnd() {
 }
 
 int scll::deleteAtPos(int pos) {
-	int c, temp, i = 1;
+	int c, i = 1;
 	c = nodeCount();
 	if(head == NULL)
 		cout<<"Nothing to delete."<<endl;
@@ -109,6 +109,7 @@ int scll::deleteAtPos(int pos) {
 		else if(pos == c)
 			deleteAtEnd();
 		else {
+			int temp;
 			node *t1, *t2;
 			t1 = head;
 			while(i++ < pos) {
@@ -118,8 +119,8 @@ int scll::deleteAtPos(int pos) {
 			temp = t1->data;
 			t2->next = t1->next;
 			delete t1;
+			return temp;
 		}
-		return temp;
 	}
 }
 
