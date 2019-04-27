@@ -128,12 +128,14 @@ int dll::deleteBeforePos(int pos) {
 
 int dll::deleteAfterPos(int pos) {
 	int i = 1;
+	int c = nodeCount();
 	if(head == NULL) {
 		cout<<"Nothing to delete!"<<endl;
 		return 0;
 	}
+	else if(pos == c-1)
+		deleteAtEnd();
 	else {
-		int c = nodeCount();
 		if(pos >= c) {
 			cout<<"Can't delete #"<<c+1<<" element"<<endl;
 			return 0;
