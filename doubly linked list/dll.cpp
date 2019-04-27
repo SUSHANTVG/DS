@@ -41,8 +41,8 @@ bool dll::addBeforePos(int ele, int pos) {
 
 bool dll::addAfterPos(int ele, int pos) {
 	int i = 1;
-	if(head == NULL || pos == 1)
-		addAtEnd(ele);
+	if(head == NULL)
+		addAtBeg(ele);
 	else {
 		node *temp, *t1;
 		temp = new node;
