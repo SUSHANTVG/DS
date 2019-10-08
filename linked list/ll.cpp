@@ -114,5 +114,5 @@ void ll::reverseDisplay(node *head) {
 	
 	reverseDisplay(head->next);
 	
-	cout<<head->data<<" -> ";
+	cout<<" <- "<<head->data;
 }
