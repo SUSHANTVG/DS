@@ -8,9 +8,11 @@ bool ll::insertAtBeg(int ele) {
 	struct node *temp;
 	temp = new node;
 	temp->data = ele;
-	temp->next = NULL;
+	if(head == NULL)
+		temp->next = NULL;
 	temp->next = head;
 	head = temp;
+	return true;
 }
 
 bool ll::insertAtEnd(int ele) {
@@ -104,4 +106,13 @@ void ll::display() {
 		t1 = t1->next;
 	}
 	cout<<"\n";
+}
+
+void ll::reverseDisplay(node *head) {
+	if(head == NULL)
+		return;
+	
+	reverseDisplay(head->next);
+	
+	cout<<head->data<<" -> ";
 }
