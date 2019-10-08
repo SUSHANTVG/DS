@@ -12,9 +12,9 @@ struct node {
 };
 
 class ll {
-	private:
-		struct node *head;
 	public:
+		struct node *head;
+		
 		ll();
 		bool insertAtBeg(int);
 		bool insertAtEnd(int);
@@ -23,6 +23,7 @@ class ll {
 		int deleteAtEnd();
 		int deleteAtPos(int);
 		void display();
+		void reverseDisplay(node *);
 };
 
 #endif
